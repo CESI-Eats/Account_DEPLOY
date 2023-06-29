@@ -2,7 +2,7 @@ app:
   name: account-api
   namespace: cesi-eats
   image:
-    repository: cesieats/account
+    repository: ghcr.io/cesi-eats/account_api
     tag: latest
 
 dependencies:

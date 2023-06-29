@@ -12,10 +12,6 @@ jobs:
         with:
           repository: CESI-Eats/Account_DEPLOY
 
-      - name: echo ls
-        run: |
-          echo $(ls)
-
       - name: Helm Upgrade
         run: |
-          helm upgrade account-api ./ -f ./values.yaml --install --namespace cesi-eats --create-namespace
+          helm upgrade account-api-chart ./ -f ./values.yaml --install --namespace cesi-eats --create-namespace

@@ -21,10 +21,3 @@ spec:
           envFrom:
             - secretRef:
                 name: {{ .Values.app.name }}-env-secret
-          resources:
-            limits:
-              memory: "254Mi"
-              cpu: "500m"
-            requests:
-              memory: "128Mi"
-              cpu: "250m"
