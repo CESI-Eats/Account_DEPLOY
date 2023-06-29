@@ -21,3 +21,6 @@ spec:
           envFrom:
             - secretRef:
                 name: {{ .Values.app.name }}-env-secret
+          env:
+            - name: POSTGRES_PORT
+              value: "{{ .Values.dependencies.database.port }}"
