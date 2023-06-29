@@ -1,0 +1,17 @@
+app:
+  name: account-api
+  namespace: cesi-eats
+  image:
+    repository: cesieats/account
+    tag: latest
+
+dependencies:
+  lapinou:
+    uri: amqp://identity-service.cesi-eats.svc.cluster.local:5672
+
+  database:
+    host: armanddebesse.fr
+    port: 5432
+    username: root
+    password: password
+    db_name: account_db
