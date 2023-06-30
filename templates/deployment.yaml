@@ -18,11 +18,12 @@ spec:
       containers:
         - name: {{ .Values.app.name }}-container
           image: {{ .Values.app.image.repository }}:{{ .Values.app.image.tag }}
+          pullPolicy: always
           ports:
             - containerPort: 3000
           envFrom:
             - secretRef:
                 name: {{ .Values.app.name }}-env-secret
           env:
-            - name: POSTGRES_PORT
+            - name: DB_PORT
               value: "{{ .Values.dependencies.database.port }}"
